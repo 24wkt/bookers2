@@ -1,0 +1,18 @@
+<h1>Users</h1>
+<table>
+  <thead>
+    <th>Image</th>
+    <th>Title</th>
+    <th>Opinion</th>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= attachment_image_tag, :profile_image.user, :fill, 60, 60, fallback: "no_image_jpg" %></td>
+        <% @book.each do |book| %>
+          <td><%= book.title(user.id) %></td>
+          <td><%= book.body(user.id) %></td>
+        <% end %>
+      </tr>
+  </tbody>
+</table>
+
