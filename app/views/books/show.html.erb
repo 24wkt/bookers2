@@ -1,10 +1,14 @@
 <h2>Book detail</h2>
 <table>
   <tbody>
-    
+
     <tr>
-      <td><%= attachment_image_tag @book.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></td><br />
+      <td><%= attachment_image_tag @book.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></td>
       <td><%= @book.user.name %></td>
+      <% @books.each do |book| %>
+        <td><%= book.name %></td>
+        <td><%= book.body %></td>
+      <% end %>
     </tr>
   </tbody>
 </table>
