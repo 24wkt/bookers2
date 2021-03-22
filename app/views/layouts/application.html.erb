@@ -42,6 +42,12 @@
             </li>
           <% end %>
     </header>
-  <%= yield %>
+
+    <%= render 'layouts/notifications' %>
+    <%= yield %>
+
+    <footer>
+      <p>CopyRight Infratop.inc</P>
+    </footer>
   </body>
 </html>
