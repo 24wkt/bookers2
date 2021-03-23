@@ -13,14 +13,14 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navibar-brannd text-light" href="/" %>
-            <span>Bookers2</span>
+          <a class="navibar-brand text-light" href="/" %>
+            <span>Bookers</span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="qaz navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
                 <li>
                   <%= link_to "Home", user_path(current_user.id), class: "fas fa-home text-light" %>
@@ -53,12 +53,11 @@
         </div>
       </nav>
     </header>
-
-    <div class="container px-5 px-sm-0">
-      <%= render 'layouts/notifications' %>
-    </div>
-
-
+    <main>
+      <div class="container px-5 px-sm-0">
+        <%= render 'layouts/notifications' %>
+      </div>
+    </main>
 
     <%= yield %>
 
